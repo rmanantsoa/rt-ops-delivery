@@ -1,0 +1,7 @@
+kubeconfig
+.kube/
+.kind/
+*.token
+*.pem
+*.key
+.env
