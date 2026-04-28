@@ -15,7 +15,7 @@ spec:
         namespace: flux-system
   values:
     image:
-      tag: 11.4.5-debian-12-r0
+      tag: 11.4
     auth:
       rootPassword: "rt-passwd"
       database: "rt-mdb"
