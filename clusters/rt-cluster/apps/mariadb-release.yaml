@@ -14,10 +14,13 @@ spec:
         name: bitnami
         namespace: flux-system
   values:
-    auth:
-      rootPassword: "rt-passwd"
-      database: "rt-mdb"
+    # AJOUTEZ CETTE SECTION ICI
     primary:
+      image:
+        tag: 11.4.5-debian-12-r0  # Tag valide et existant
       persistence:
         enabled: true
         size: 5Gi
+    auth:
+      rootPassword: "rt-passwd"
+      database: "rt-mdb"
