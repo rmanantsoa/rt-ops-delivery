@@ -17,7 +17,7 @@ spec:
     image:
       registry: docker.io
       repository: bitnami/mariadb
-      tag: 11.4.5-debian-12-r2  # Version spécifique actuelle
+      tag: latest
     auth:
       rootPassword: "rt-passwd"
       database: "rt-mdb"
