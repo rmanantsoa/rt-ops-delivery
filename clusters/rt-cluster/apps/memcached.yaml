@@ -1,34 +1,38 @@
-apiVersion: source.toolkit.fluxcd.io/v1
-kind: HelmRepository
+apiVersion: apps/v1
+kind: Deployment
 metadata:
-  name: bitnami
-  namespace: flux-system
+  name: memcached-test
+  labels:
+    app: ephemeral-cache
 spec:
-  interval: 1h
-  url: https://charts.bitnami.com/bitnami
----
-apiVersion: helm.toolkit.fluxcd.io/v2
-kind: HelmRelease
-metadata:
-  name: cache-test
-  namespace: default
-spec:
-  interval: 15m
-  chart:
+  replicas: 1
+  selector:
+    matchLabels:
+      app: ephemeral-cache
+  template:
+    metadata:
+      labels:
+        app: ephemeral-cache
     spec:
-      chart: memcached
-      version: '7.x.x'
-      sourceRef:
-        kind: HelmRepository
-        name: bitnami
-        namespace: flux-system
-  values:
-    architecture: standalone
-    replicaCount: 1
-    resources:
-      limits:
-        cpu: 100m
-        memory: 128Mi
-      requests:
-        cpu: 50m
-        memory: 64Mi
+      containers:
+      - name: memcached
+        image: memcached:1.6-alpine
+        ports:
+        - containerPort: 11211
+        resources:
+          limits:
+            cpu: "100m"
+            memory: "64Mi"
+---
+apiVersion: v1
+kind: Service
+metadata:
+  name: memcached-service
+spec:
+  selector:
+    app: ephemeral-cache
+  ports:
+    - protocol: TCP
+      port: 11211
+      targetPort: 11211
+  type: ClusterIP
