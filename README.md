@@ -9,7 +9,7 @@
 - **GitOps :** Flux CD (Pull model)
 - **IaC :** Terraform / Ansible
 - **CI/CD :** GitHub Actions
-- **Infrastructure :** Linux Hardened Repositories, Veeam integration, Networking (Sophos/Azure)
+
 
 ## Structure du Projet
 ```text
