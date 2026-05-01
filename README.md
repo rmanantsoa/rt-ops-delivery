@@ -1,4 +1,4 @@
-# DevOps/IT Infrastructure/GitOps focus
+# IT Infrastructure/GitOps focus
 
 
 ## Description
