@@ -1,5 +1,5 @@
-# Improved README content based on user profile (DevOps/IT Infrastructure/GitOps focus)
-readme_content = """# rt-ops-delivery
+# DevOps/IT Infrastructure/GitOps focus
+
 
 ## Description
 `rt-ops-delivery` est un framework d'automatisation des opérations (GitOps) conçu pour le déploiement continu d'infrastructures et d'applications microservices. Ce dépôt centralise les workflows CI/CD, les configurations IaC (Infrastructure as Code) et la gestion des déploiements Kubernetes.
