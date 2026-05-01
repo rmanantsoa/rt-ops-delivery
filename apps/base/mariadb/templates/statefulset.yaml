@@ -24,7 +24,10 @@ spec:
               name: mysql
           env:
             - name: MARIADB_ROOT_PASSWORD
-              value: {{ .Values.auth.rootPassword | quote }}
+              valueFrom:
+                secretKeyRef:
+                  name: mariadb-auth
+                  key: mariadb-root-password
             - name: MARIADB_DATABASE
               value: {{ .Values.auth.database | quote }}
           volumeMounts:
