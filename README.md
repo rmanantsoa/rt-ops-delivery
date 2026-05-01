@@ -2,7 +2,7 @@
 
 
 ## Description
-`rt-ops-delivery` est un framework d'automatisation des opérations (GitOps) conçu pour le déploiement continu d'infrastructures et d'applications microservices. Ce dépôt centralise les workflows CI/CD, les configurations IaC (Infrastructure as Code) et la gestion des déploiements Kubernetes.
+`Test project designed for GitOps operations and continuous delivery of infrastructures and microservices applications. This repository centralizes CI/CD workflows, Infrastructure as Code (IaC) configurations, and Kubernetes deployment management.
 
 ## Architecture & Stack
 - **Orchestration :** Kubernetes (Kind/Production)
