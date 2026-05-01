@@ -1,0 +1,15 @@
+replicaCount: 1
+
+image:
+  repository: mariadb
+  tag: "10.6"
+  pullPolicy: IfNotPresent
+
+auth:
+  rootPassword: "my_pass"
+  database: "app_db"
+
+persistence:
+  enabled: true
+  size: 8Gi
+  accessMode: ReadWriteOnce
