@@ -18,4 +18,4 @@ spec:
   values:
     # Ici, vous pouvez surcharger les valeurs de base spécifiquement pour rt-cluster
     persistence:
-      size: 9Gi
+      size: 8Gi
