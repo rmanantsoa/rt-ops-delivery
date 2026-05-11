@@ -16,6 +16,5 @@ spec:
     remediation:
       retries: 3
   values:
-    # Ici, vous pouvez surcharger les valeurs de base spécifiquement pour rt-cluster
     persistence:
-      size: 10Gi
+      size: 8Gi

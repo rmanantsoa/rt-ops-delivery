@@ -1,0 +1,10 @@
+apiVersion: v1
+kind: Pod
+metadata:
+  name: debug-tools
+  namespace: default
+spec:
+  containers:
+  - name: network-utils
+    image: nicolaka/netshoot
+    command: ["/bin/sh", "-c", "sleep infinity"]
