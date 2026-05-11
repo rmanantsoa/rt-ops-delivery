@@ -1,0 +1,13 @@
+---
+- name: Ansible GitOps Helper
+  hosts: localhost
+  tasks:
+    - name: Verify MariaDB Chart existence
+      ansible.builtin.stat:
+        path: "../apps/base/mariadb/Chart.yaml"
+      register: chart_check
+
+    - name: Fail if Chart is missing
+      ansible.builtin.fail:
+        msg: "MariaDB Chart not found!"
+      when: not chart_check.stat.exists
