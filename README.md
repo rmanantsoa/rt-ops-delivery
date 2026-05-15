@@ -15,7 +15,7 @@
 ```text
 .
 ├── .github/workflows/   # CI Pipelines
-├── clusters/            # Définitions Kubernetes (Kustomize/Helm)
-├── infrastructure/      # Scripts Terraform / Ansible
+├── clusters/            # Définitions Kubernetes
+├── infrastructure/      # Scripts
 ├── scripts/             # Utilitaires de déploiement
 └── README.md
